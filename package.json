@@ -1,18 +1,23 @@
 {
   "name": "port2023-mainsite-server",
   "version": "1.0.0",
-  "description": "- 포트폴리오 사이트 서버",
+  "description": "포트폴리오 사이트 서버",
   "main": "web.js",
   "scripts": {
     "start": "nodemon web.js",
+    "dev": "concurrently \"npm run dev:sev\" \"npm run dev:dev\"",
+    "dev:sev": "npm start",
+    "dev:dev": "cd C:Users82108DesktopJSP이경민개별포트폴리오port2023-mainsite-serverport2023-portmainsite && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "kyungmin0729",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
     "nodemon": "^3.0.1"
   }
 }

@@ -4,7 +4,9 @@
 
 ## 프로젝트 개요
 
-- Server단(port2023-mainsite-server)과 Client단(port2023-portmainsite)으로 사이트 구성
+- Server단(express)과 Client단(react.js)으로 사이트 구성
+- proxy로 클라이언트와 API 서버 간의 인터페이스 형성
+- axios로 요청, 응답 처리
 - eslint, prettier를 이용하여 버그를 분석하여 해결하고 질 좋은 코드를 작성
 - node.js 형식으로 cafe24 호스팅 배포
 
@@ -13,7 +15,12 @@
 ### Server
 
 - express는 Node.js 기반의 웹 프레임워크로, 웹 애플리케이션 및 API를 개발하기 위해 사용됩니다.
-- nodemon은 파일의 변경을 감지하여 자동으로 애플리케이션을 다시 시작해주는 패키지입니다.
+- nodemon
+- concurrently
+- proxy는 CORS 에러를 해결하여 클라이언트에 보다 안정적인 인터페이스를 제공할 수 있습니다.
+- http-proxy-middleware는 HTTP 요청을 프록시 서버로 전달하고 응답을 받을 수 있습니다.
+
+* 학습 : CORS는 왜 발생 하는가? 요청을 보내는 클라이언트 서버와 요청을 받는 서버의 도메인이 다를 때 생기는 문제
 
 ### Client
 
@@ -21,6 +28,8 @@
 - react를 사용하여 사이트를 번들링하고 관리합니다.
 - gsap를 이용하여 패럴랙스 효과를 줍니다.
 - lenis를 이용하여 smooth 효과를 구현합니다.
+- http-proxy-middleware를 이용하여 효율적이고 유지보수를 향상시킵니다.
+- axios를 이용하여 클라이언트와 서버 간에 HTTP 요청을 보내고 응답을 받습니다.
 - cafe24를 통해 사이트를 배포합니다.
 - git을 사용하여 파일을 관리합니다.
 
@@ -41,14 +50,20 @@
   `$ npm init -y`
 - serve를 설치합니다.
   `npm install -g serve`
-- express, nodemon를 설치합니다.
-  `$ npm install express nodemon`
+- express, nodemon, concurrently를 설치합니다.
+  `$ npm install express nodemon concurrently`
+- http-proxy-middleware를 설치합니다.
+  `npm install --save http-proxy-middleware `
 
 ### Client
 
 - react를 설치합니다. `npx create-react-app 타이틀`
 - react-router-dom, sass, gsap, lenis를 설치합니다.
   `npm install react-router-dom sass gsap @studio-freight/lenis`
+- axios를 설치합니다.
+  `npm install axios`
+- http-proxy-middleware를 설치합니다.
+  `npm install --save-dev http-proxy-middleware`
 
 ### prettier, eslint
 
