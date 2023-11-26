@@ -1,6 +1,7 @@
 {
   "name": "port2023-mainsite-server",
   "version": "1.0.0",
+  "type": "module",
   "description": "포트폴리오 사이트 서버",
   "main": "web.js",
   "scripts": {
