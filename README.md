@@ -17,8 +17,8 @@
 "
 
 - express는 Node.js 기반의 웹 프레임워크로, 웹 애플리케이션 및 API를 개발하기 위해 사용됩니다.
-- nodemon
-- concurrently
+- nodemon는 개발 시 자동 재시작을 제공하는 도구입니다.
+- concurrently는 서버와 클라이언트를 동시에 실행할 수 있도록 도와줍니다.
 - proxy는 CORS 에러를 해결하여 클라이언트에 보다 안정적인 인터페이스를 제공할 수 있습니다.
 - http-proxy-middleware는 HTTP 요청을 프록시 서버로 전달하고 응답을 받을 수 있습니다.
 
