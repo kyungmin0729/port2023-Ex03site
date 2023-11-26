@@ -1,7 +1,7 @@
-const express = require("express");
-const { createProxyMiddleware } = require("http-proxy-middleware");
+const express = import("express");
+const { createProxyMiddleware } = import("http-proxy-middleware");
 const app = express();
-const path = require("path");
+const path = import("path");
 const POST = 3000;
 const HOST = "localhost";
 const API_URL = "<http://kyungmindevport.site>";
